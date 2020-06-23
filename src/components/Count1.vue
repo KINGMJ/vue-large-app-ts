@@ -18,8 +18,7 @@ export default {
 
     return {
       state,
-      increment,
-      plusOne
+      increment
     };
   }
 };
