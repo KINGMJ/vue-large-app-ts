@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import CompositionDemo1 from '../views/CompositionDemo1.vue'
+import CompositionDemo2 from '../views/CompositionDemo2.vue'
 
 
 Vue.use(VueRouter)
@@ -24,6 +25,11 @@ const routes: Array<RouteConfig> = [
     path: '/composition-demo1',
     name: 'CompositionDemo1',
     component: CompositionDemo1
+  },
+  {
+    path: '/composition-demo2',
+    name: 'CompositionDemo2',
+    component: CompositionDemo2
   }
 ]
 
