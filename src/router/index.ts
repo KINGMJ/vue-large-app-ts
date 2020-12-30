@@ -37,8 +37,6 @@ const generateDemoRoutes = (demoCount: number) => {
 
 routes = routes.concat(generateDemoRoutes(demoCount))
 
-console.log(routes)
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
