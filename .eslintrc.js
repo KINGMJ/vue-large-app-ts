@@ -15,8 +15,7 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
     'space-before-function-paren': 0,
-    //https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md
-    'no-inferrable-types': 1
+    '@typescript-eslint/no-inferrable-types': 'off'
   },
 
   overrides: [
@@ -26,7 +25,5 @@ module.exports = {
         jest: true
       }
     }
-  ],
-
-  extends: ['plugin:vue/essential', '@vue/standard', '@vue/typescript/recommended']
+  ]
 }

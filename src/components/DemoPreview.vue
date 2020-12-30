@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h3>网站参考</h3>
     <ul>
-      <li><a href="https://v3.vuejs.org/guide/introduction.html" target="_blank" rel="noopener">Vue3</a></li>
+      <li><a href="https://v3.vuejs.org/guide/introduction.html" target="_blank" rel="noopener">vue3</a></li>
       <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
       <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
