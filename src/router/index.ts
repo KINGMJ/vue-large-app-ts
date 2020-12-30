@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
 
-const routes: Array<RouteRecordRaw> = [
+// demo的个数
+const demoCount = 3
+let routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
@@ -16,6 +18,26 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
+
+/**
+ * 生成demo的路由
+ * @param demoCount demo个数
+ */
+const generateDemoRoutes = (demoCount: number) => {
+  const demoRoutes = []
+  for (let i = 1; i <= demoCount; i++) {
+    demoRoutes.push({
+      path: `/demo${i}`,
+      name: `Demo${i}`,
+      component: () => import(`@/views/Demo${i}.vue`)
+    })
+  }
+  return demoRoutes
+}
+
+routes = routes.concat(generateDemoRoutes(demoCount))
+
+console.log(routes)
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
