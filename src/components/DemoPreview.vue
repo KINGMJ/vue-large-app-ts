@@ -10,9 +10,9 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
-    <h3>示例代码</h3>
+    <h3>TypeScript 示例代码</h3>
     <ul>
-      <li><a href="/demo1" rel="noopener">示例一</a></li>
+      <li><a href="/demo1" rel="noopener">基础类型</a></li>
     </ul>
   </div>
 </template>
