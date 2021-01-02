@@ -26,7 +26,7 @@ export default defineComponent({
     msg: String
   },
   setup() {
-    const demos = ref(['基础类型', '接口'])
+    const demos = ref(['基础类型', '接口', '可索引的类型'])
     return {
       demos
     }
