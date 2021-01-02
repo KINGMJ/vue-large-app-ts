@@ -15,7 +15,8 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
     'space-before-function-paren': 0,
-    '@typescript-eslint/no-inferrable-types': 'off'
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off'
   },
 
   overrides: [

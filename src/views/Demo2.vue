@@ -1,15 +1,15 @@
 <template>
-  <div>TypeScript 基础类型</div>
+  <div>TypeScript 接口</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Demo1Service from '@/services/demo1.ts'
+import Demo2Service from '@/services/demo2.ts'
 
 export default defineComponent({
-  name: 'Demo1',
+  name: 'Demo2',
   setup() {
-    Demo1Service.bootstrap()
+    Demo2Service.bootstrap()
   }
 })
 </script>

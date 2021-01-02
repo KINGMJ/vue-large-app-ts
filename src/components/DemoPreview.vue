@@ -12,22 +12,26 @@
     </ul>
     <h3>TypeScript 示例代码</h3>
     <ul>
-      <li><a href="/demo1" rel="noopener">基础类型</a></li>
+      <li v-for="(item, index) in demos" :key="index">
+        <a :href="`/demo${index + 1}`" rel="noopener">{{ item }}</a>
+      </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-
-@Options({
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
   props: {
     msg: String
+  },
+  setup() {
+    const demos = ref(['基础类型', '接口'])
+    return {
+      demos
+    }
   }
 })
-export default class DemoPreview extends Vue {
-  msg!: string
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
