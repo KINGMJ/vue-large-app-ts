@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '@/views/Home.vue'
 
 // demo的个数
-const demoCount = 4
+const demoCount = 12
 let routes: Array<RouteRecordRaw> = [
   {
     path: '/',
