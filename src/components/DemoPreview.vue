@@ -10,7 +10,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
-    <h3>TypeScript 示例代码</h3>
+    <h3>Vue3 Typescript 支持</h3>
     <ul>
       <li v-for="(item, index) in demos" :key="index">
         <a :href="`/demo${index + 1}`" rel="noopener">{{ item }}</a>
@@ -26,7 +26,7 @@ export default defineComponent({
     msg: String
   },
   setup() {
-    const demos = ref(['基础类型', '接口', '可索引的类型', '类类型', '类', '函数', '泛型'])
+    const demos = ref(['Using with Options API'])
     return {
       demos
     }

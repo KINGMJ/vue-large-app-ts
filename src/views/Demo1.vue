@@ -1,15 +1,22 @@
 <template>
-  <div>TypeScript 基础类型</div>
+  <div>Using with Options API</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Demo1Service from '@/services/demo1.ts'
+
+interface Book {
+  title: string
+  author: string
+  year: number
+}
 
 export default defineComponent({
   name: 'Demo1',
-  setup() {
-    Demo1Service.bootstrap()
+  data() {
+    return {
+      book {}
+    }
   }
 })
 </script>
