@@ -10,7 +10,6 @@ import { Book } from '@/types'
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
-  name: 'Component1',
   props: {
     name: String,
     success: { type: String },
@@ -19,6 +18,10 @@ export default defineComponent({
     },
     book: {
       type: Object as PropType<Book>,
+      default: () => ({
+        title: 'Arrow Function Expression'
+      }),
+      validator: (book: Book) => !!book.title,
       require: true
     }
   },
