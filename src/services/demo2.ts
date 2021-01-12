@@ -56,8 +56,8 @@ export default {
       readonly x: number
       readonly y: number
     }
-    const p1: Point = { x: 5, y: 5 }
-    p1.x = 10 // error
+    // const p1: Point = { x: 5, y: 5 }
+    // p1.x = 10 // error
   },
 
   interfaceDemo5() {

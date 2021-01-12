@@ -4,12 +4,12 @@ export default {
     // this.arrayDemo()
     // this.tupleDemo()
     // this.enumDemo()
-    // this.enumDemo2()
+    this.enumDemo2()
     // this.enumDemo3()
     // this.unKnowDemo()
     // this.anyDemo()
     // this.objectDemo()
-    this.assertionsDemo()
+    // this.assertionsDemo()
   },
 
   basicDemo() {
@@ -70,7 +70,7 @@ export default {
   enumDemo2() {
     enum Color {
       Red = 3,
-      Green,
+      Green = 5,
       Blue
     }
     const c: Color = Color.Blue

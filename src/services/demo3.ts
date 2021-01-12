@@ -29,7 +29,7 @@ export default {
     // error
     interface Foo {
       [key: string]: string
-      length: number
+      // length: number
     }
 
     // success
@@ -68,10 +68,10 @@ export default {
       readonly [index: number]: string
     }
     // 索引签名为 string 不能声明为一个数组
-    const myString: StringArray = ['jack', 'rose']
+    // const myString: StringArray = ['jack', 'rose']
     // 但是索引签名为 number 可以声明为对象
     const myNumber: NumberArray = { 1: 'jack', 2: 'rose' }
-    console.log(myString)
+    // console.log(myString)
     console.log(myNumber)
   }
 }
