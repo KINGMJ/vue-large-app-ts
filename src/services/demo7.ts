@@ -1,6 +1,7 @@
 export default {
   bootstrap() {
-    this.genericsDemo1()
+    // this.genericsDemo1()
+    this.genericsDemo2()
   },
 
   genericsDemo1() {
@@ -13,5 +14,13 @@ export default {
 
     const output1 = identify(123)
     console.log(output1)
+  },
+
+  genericsDemo2() {
+    function loggingIdentity<T>(arg: Array<T>): Array<T> {
+      console.log(arg.length) // Array has a .length, so no more error
+      return arg
+    }
+    loggingIdentity([1, 2, 3])
   }
 }
