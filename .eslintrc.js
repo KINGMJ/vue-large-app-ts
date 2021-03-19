@@ -4,9 +4,13 @@ module.exports = {
   env: {
     node: true
   },
+<<<<<<< HEAD
 
   extends: ['plugin:vue/vue3-essential', '@vue/standard', '@vue/typescript/recommended'],
 
+=======
+  extends: ['plugin:vue/vue3-essential', '@vue/standard', '@vue/typescript/recommended'],
+>>>>>>> origin/features/project-basic-scaffolding
   parserOptions: {
     ecmaVersion: 2020
   },
