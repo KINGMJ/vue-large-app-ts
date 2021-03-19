@@ -4,7 +4,9 @@ module.exports = {
   env: {
     node: true
   },
+
   extends: ['plugin:vue/vue3-essential', '@vue/standard', '@vue/typescript/recommended'],
+
   parserOptions: {
     ecmaVersion: 2020
   },
@@ -24,5 +26,11 @@ module.exports = {
         jest: true
       }
     }
+  ],
+
+  'extends': [
+    'plugin:vue/recommended',
+    '@vue/standard',
+    '@vue/typescript/recommended'
   ]
 }

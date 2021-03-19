@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Demo8Service from '@/services/demo8.ts'
+import Demo8Service from '@/services/demo8'
 
 export default defineComponent({
   name: 'Demo8',
