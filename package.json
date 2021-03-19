@@ -37,11 +37,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-standard": "^4.0.0",
-<<<<<<< HEAD
-    "eslint-plugin-vue": "^7.0.0-0",
-=======
     "eslint-plugin-vue": "^7.7.0",
->>>>>>> origin/features/project-basic-scaffolding
     "sass": "^1.32.8",
     "sass-loader": "^8.0.2",
     "typescript": "^4.2.3",
