@@ -12,7 +12,10 @@ module.exports = {
     'no-debugger': 'off',
     'space-before-function-paren': 0,
     '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/member-delimiter-style': 'off'
+    '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-types': 'off'
   },
   overrides: [
     {
