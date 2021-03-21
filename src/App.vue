@@ -1,10 +1,20 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <h2>My Vue 3 Project</h2>
+    <div id="nav" class="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
-  <router-view/>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'App'
+})
+</script>
 
 <style lang="scss">
 #app {
@@ -13,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  h2 {
+    margin: 0;
+  }
 }
 
 #nav {
