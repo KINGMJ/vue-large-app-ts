@@ -11,6 +11,8 @@ if (process.env && process.env.VUE_APP_API_CLIENT) {
   env = process.env.VUE_APP_API_CLIENT.trim()
 }
 
+console.log(env)
+
 let apiClient: ApiClientInterface
 if (env === 'live') {
   apiClient = apiLiveClient
