@@ -13,7 +13,6 @@ export class ItemsApiClientModel implements ItemsApiClientInterface {
   fetchItems(): Promise<ItemInterface[]> {
     return new Promise<ItemInterface[]>(resolve => {
       const url = this.urls.fetchItems
-
       // axios options
       const options: AxiosRequestConfig = {
         headers: {}
@@ -21,6 +20,7 @@ export class ItemsApiClientModel implements ItemsApiClientInterface {
       axios
         .get(url, options)
         .then((response: AxiosResponse) => {
+          console.log(response)
           resolve(response.data as ItemInterface[])
         })
         .catch((error: any) => {
