@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { HttpClient, HttpRequestParamsInterface } from '@/models/http-client'
 
 import { ItemsApiClientUrlsInterface } from './ItemsApiClientUrls.interface'
 import { ItemsApiClientInterface } from './ItemsApiClient.interface'
@@ -11,21 +11,10 @@ export class ItemsApiClientModel implements ItemsApiClientInterface {
   }
 
   fetchItems(): Promise<ItemInterface[]> {
-    return new Promise<ItemInterface[]>(resolve => {
-      const url = this.urls.fetchItems
-      // axios options
-      const options: AxiosRequestConfig = {
-        headers: {}
-      }
-      axios
-        .get(url, options)
-        .then((response: AxiosResponse) => {
-          console.log(response)
-          resolve(response.data as ItemInterface[])
-        })
-        .catch((error: any) => {
-          console.error('ItemsApiClient: HttpClient: Get: error', error)
-        })
-    })
+    const getParameters: HttpRequestParamsInterface = {
+      url: this.urls.fetchItems,
+      requiresToken: false
+    }
+    return HttpClient.get<ItemInterface[]>(getParameters)
   }
 }
