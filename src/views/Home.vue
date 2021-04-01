@@ -7,7 +7,8 @@
 <script lang="ts">
 import ItemsListComponent from '@/components/items/ItemsList.component.vue'
 import { computed, defineComponent, onMounted } from 'vue'
-import store from '@/store'
+import { store } from '@/store'
+import { MutationType, StoreModuleNames } from '@/models/store'
 import { ItemInterface } from '@/models/items/Item.interface'
 
 export default defineComponent({
@@ -15,19 +16,19 @@ export default defineComponent({
   components: { ItemsListComponent },
   setup() {
     const onSelectItem = (item: ItemInterface) => {
-      store.dispatch('selectItem', {
+      store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.selectItem}`, {
         id: item.id,
         selected: item.selected
       })
     }
     const items = computed(() => {
-      return store.state.items
+      return store.state.itemsState.items
     })
     const loading = computed(() => {
-      return store.state.loading
+      return store.state.itemsState.loading
     })
     onMounted(() => {
-      store.dispatch('loadItems')
+      store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.loadItems}`)
     })
     return { items, loading, onSelectItem }
   }
