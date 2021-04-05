@@ -7,28 +7,29 @@
 <script lang="ts">
 import ItemsListComponent from '@/components/items/ItemsList.component.vue'
 import { computed, defineComponent, onMounted } from 'vue'
-import { store } from '@/store'
-import { MutationType, StoreModuleNames } from '@/models/store'
+import { useItemsStore } from '@/store/items'
+import { MutationType } from '@/models/store'
 import { ItemInterface } from '@/models/items/Item.interface'
 
 export default defineComponent({
   name: 'Home',
   components: { ItemsListComponent },
   setup() {
+    const itemsStore = useItemsStore()
     const onSelectItem = (item: ItemInterface) => {
-      store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.selectItem}`, {
+      itemsStore.action(MutationType.items.selectItem, {
         id: item.id,
         selected: item.selected
       })
     }
     const items = computed(() => {
-      return store.state.itemsState.items
+      return itemsStore.state.items
     })
     const loading = computed(() => {
-      return store.state.itemsState.loading
+      return itemsStore.state.loading
     })
     onMounted(() => {
-      store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.loadItems}`)
+      itemsStore.action(MutationType.items.loadItems)
     })
     return { items, loading, onSelectItem }
   }

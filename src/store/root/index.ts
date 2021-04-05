@@ -1,7 +1,7 @@
 import { createStore, StoreOptions } from 'vuex'
 import { RootStateInterface, RootStoreModel } from '@/models/store'
 import { initialRootState } from './initialState'
-import { itemsState } from '@/store/items'
+import { itemsState } from '@/store/items/module'
 
 const storeOptions: StoreOptions<RootStateInterface> = {
   state: initialRootState,
@@ -10,4 +10,8 @@ const storeOptions: StoreOptions<RootStateInterface> = {
   }
 }
 
-export const store: RootStoreModel<RootStateInterface> = <any>createStore(storeOptions)
+export const rootStore: RootStoreModel<RootStateInterface> = <any>createStore(storeOptions)
+
+export function dispatchModuleAction<T>(moduleName: string, actionName: string, params?: T): void {
+  rootStore.dispatch(`${moduleName}/${actionName}`, params)
+}
