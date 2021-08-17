@@ -27,3 +27,9 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### 技术栈
+
+
+https://vue-i18n.intlify.dev/installation.html#global-import
