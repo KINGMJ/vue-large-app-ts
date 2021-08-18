@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2>My Vue 3 Project</h2>
+    <h2>{{ t('welcome') }}</h2>
     <div id="nav" class="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -11,8 +11,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  setup() {
+    const { t } = useI18n()
+    return {
+      t
+    }
+  }
 })
 </script>
 

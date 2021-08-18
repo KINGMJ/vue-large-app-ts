@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Items - loading: {{ loading }}:</h3>
+    <h3>Items - loading: {{ loading }}</h3>
     <loader-component v-show="loading" />
     <ul>
       <item-component v-for="item in items" :key="item.id" :model="item" @select="onItemSelect" />
