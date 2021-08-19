@@ -5,25 +5,25 @@ export const initialLocalesState: LocalesStateInterface = {
     {
       name: 'USA',
       locale: 'en-US',
-      flag: 'us',
+      flag: 'US',
       selected: false
     },
     {
       name: 'Italy',
       locale: 'it-IT',
-      flag: 'it',
+      flag: 'IT',
       selected: true
     },
     {
       name: 'Spain',
       locale: 'es-ES',
-      flag: 'es',
+      flag: 'ES',
       selected: false
     },
     {
       name: 'France',
       locale: 'fr-FR',
-      flag: 'fr',
+      flag: 'FR',
       selected: false
     }
   ]

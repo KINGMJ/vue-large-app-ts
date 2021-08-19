@@ -31,6 +31,7 @@ export default defineComponent({
     const onFlagClicked = (localeInfo: LocaleInfoInterface) => {
       emit('clicked', localeInfo)
     }
+
     return {
       onFlagClicked
     }
