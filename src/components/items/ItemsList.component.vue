@@ -32,7 +32,6 @@ export default defineComponent({
     const { t } = useI18n()
     const onItemSelect = (item: ItemInterface) => {
       item.selected = !item.selected
-      console.log('onItemSelect', item.id, item.selected)
       emit('select-item', item)
     }
     return {

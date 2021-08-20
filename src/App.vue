@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="long-date">{{ d(new Date(), 'short') }}</div>
     <h2>{{ t('welcome') }}</h2>
     <locale-selector :availableLocales="availableLocales" @clicked="onLocaleClicked" />
     <div id="nav" class="nav">
@@ -22,7 +23,7 @@ export default defineComponent({
   components: { LocaleSelector },
   name: 'App',
   setup() {
-    const { t } = useI18n()
+    const { t, d } = useI18n()
     const localesStore = useLocalesStore()
 
     const availableLocales = computed(() => {
@@ -35,6 +36,7 @@ export default defineComponent({
 
     return {
       t,
+      d,
       availableLocales,
       onLocaleClicked
     }
@@ -52,10 +54,13 @@ export default defineComponent({
   h2 {
     margin: 0;
   }
+  .long-date {
+    font-size: 12px;
+  }
 }
 
 #nav {
-  padding: 30px;
+  padding: 8px 0;
 
   a {
     font-weight: bold;
