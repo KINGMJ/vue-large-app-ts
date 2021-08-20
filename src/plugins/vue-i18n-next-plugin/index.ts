@@ -4,22 +4,32 @@ interface LocalesDataInterface {
   messages: LocaleMessages<VueMessageType>
 }
 
-const data: LocalesDataInterface = {
-  messages: {
-    'en-US': {
-      welcome: 'Welcome: this message is localized in English'
-    },
-    'it-IT': {
-      welcome: 'Benvenuti: this message is localized in Italian'
-    },
-    'fr-FR': {
-      welcome: 'Bienvenue: this message is localized in French'
-    },
-    'es-ES': {
-      welcome: 'Bienvenido: this message is localized in Spanish'
-    }
+/**
+ * 从 json 文件中获取翻译的值
+ * @returns
+ */
+const getLocalesData = (): LocalesDataInterface => {
+  // 使用 webpack 的 require.context语法读取翻译文件
+  // https://webpack.docschina.org/guides/dependency-management/
+  const files = (require as any).context('./locales', true, /\.json$/)
+  const localeData: LocalesDataInterface = {
+    messages: {}
   }
+
+  const keys: string[] = files.keys()
+
+  keys.forEach((key: string) => {
+    const matched = key.match(/([A-Za-z0-9-_]+)\./i)
+    if (matched && matched.length > 1) {
+      const localeId = matched[1]
+      localeData.messages[localeId] = files(key).messages
+    }
+  })
+
+  return localeData
 }
+
+const data: LocalesDataInterface = getLocalesData()
 
 export const i18n = createI18n({
   locale: 'it-IT',

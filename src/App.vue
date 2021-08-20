@@ -3,8 +3,8 @@
     <h2>{{ t('welcome') }}</h2>
     <locale-selector :availableLocales="availableLocales" @clicked="onLocaleClicked" />
     <div id="nav" class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">{{ t('navigation.home') }}</router-link> |
+      <router-link to="/about">{{ t('navigation.about') }}</router-link>
     </div>
     <router-view />
   </div>
