@@ -4,8 +4,8 @@ declare module '*.vue' {
   export default component
 }
 
-declare interface process{
-  env:{
-    VUE_APP_API_CLIENT:string
+declare interface process {
+  env: {
+    VUE_APP_CONFIG: string
   }
 }
