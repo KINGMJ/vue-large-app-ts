@@ -69,7 +69,22 @@ function tupleDemo2() {
     const [name, version, ...input] = args
     console.log(input)
   }
-  readBtnInput('button', 2, true, false, true)
+  // 等于同下面的写法
+  const readBtnInput1 = (name: string, version: number, ...input: boolean[]) => {
+    // ...
+  }
+  readBtnInput('button', 2, true, false)
+}
+
+function tupleDemo3() {
+  type Value = [number, number]
+  const sample = (...value: Value) => {
+    const [a, b] = value
+    console.log(a + b)
+  }
+  // 与扩展运算符（Spread expressions）一起使用
+  const sampleTuple: Value = [20, 40]
+  sample(...sampleTuple)
 }
 
 /**
