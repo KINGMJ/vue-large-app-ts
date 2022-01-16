@@ -69,7 +69,7 @@ function tupleDemo2() {
     const [name, version, ...input] = args
     console.log(input)
   }
-  readBtnInput('button', 2, true, false)
+  readBtnInput('button', 2, true, false, true)
 }
 
 /**

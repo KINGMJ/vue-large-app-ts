@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext", //指定编译后的版本
+    "target": "es6", //指定编译后的版本
     "module": "esnext", //执行要使用的模块标准
     "noImplicitAny": false, //是否默认禁用 any
     "strict": true,
