@@ -34,7 +34,20 @@ yarn lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### 运行 TS
+
+```shell
+# 执行 watch ts
+yarn watch-ts
+# 如果只监测一个文件，执行
+tsc index.js -w
+# 另一个窗口执行
+node -i -e "$(< index1.js)"
+# 重新编译在 node cli 里执行
+.load index1.js
+```
+
 ### demos
 
 - demo1/index.ts: 基本数据类型
-- demo1/index1.ts: 引用类型
+- demo1/index1.ts: 引用类型，
