@@ -87,6 +87,56 @@ function tupleDemo3() {
   sample(...sampleTuple)
 }
 
+function enumDemo() {
+  enum Color {
+    Red,
+    Green,
+    Blue
+  }
+  // 获取枚举的下标和名称
+  const c: Color = Color.Blue
+  console.log(c) // 2
+
+  const colorName: string = Color[2]
+  console.log(colorName) // 'Blue'
+}
+
+function enumDemo2() {
+  enum Color {
+    Red = 3,
+    Green = 5,
+    Blue
+  }
+  const c: Color = Color.Blue
+  console.log(c) // 5
+
+  // 枚举的下标可以根据它的前一个+1
+  const colorName: string = Color[6]
+  console.log(colorName) // 'Blue'
+}
+
+function enumDemo3() {
+  enum Position {
+    Up = 'UP',
+    Down = 'Down',
+    Left = 'Left',
+    Right = 'Right'
+  }
+  const left: Position = Position.Left
+  console.log(left === 'Left') // true
+  const down: string = Position[1] // undefined
+  console.log(down)
+}
+
+function assertionsDemo() {
+  // 类型断言的两种方式
+  const someValue: unknown = 'this is a string'
+  const strLength: number = (someValue as string).length
+  const strLength2: number = (<string>someValue).length
+  console.log(strLength) // 16
+  console.log(strLength2) // 16
+}
+
 /**
  * 1. 支持泛型，数组泛型：Array<元素类型>
  * 2. tuple元组：元组表示一个已知数量和类型的数组，各元素的类型不必相同

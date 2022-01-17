@@ -14,7 +14,7 @@ function basicDemo() {
 
   // bigint
   // esnext 不支持这种写法，es2020 支持
-  const foo: bigint = 100n
+  // const foo: bigint = 100n
   const foo1: bigint = BigInt(100)
 
   // 字符串
